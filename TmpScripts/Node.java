@@ -9,6 +9,8 @@ public class Node
     int gCost,hCost;
     boolean isWalkable;
     Node parent;
+    
+    //87
 
     Node(int x, int y, int z,Point p, boolean iswalkable)
     {
