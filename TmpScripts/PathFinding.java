@@ -38,8 +38,11 @@ public class PathFinding
 
         OpenSet.add(start);
 
-        while(true)
+        final int LOOP_MAX = 1<<20;
+        int loopCounter = 0;
+        while(loopCounter < LOOP_MAX)
         {
+            ++loopCounter;
             Node currentNode = OpenSet.poll();
 
             OpenSet.remove(currentNode);
@@ -67,8 +70,11 @@ public class PathFinding
         ArrayList<Node> path = new ArrayList<>();
         path.add(target);
         Node curr=target;
-        while(!curr.equals(start))
+        final int LOOP_MAX = 1<<20;
+        int loopCounter = 0;
+        while(!curr.equals(start)||loopCounter < LOOP_MAX)
         {
+            ++loopCounter;
             curr = curr.parent;
             path.add(curr);
         }
