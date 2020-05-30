@@ -10,8 +10,6 @@ public class Node
     boolean isWalkable;
     Node parent;
     
-    //87
-
     Node(int x, int y, int z,Point p, boolean iswalkable)
     {
         xNum=x;
